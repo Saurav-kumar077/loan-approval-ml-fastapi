@@ -88,5 +88,22 @@ Example response:
 }
 ```
 
+## 🧪 Testing
+
+Automated tests are written using **pytest** to validate the model and API behavior.
+
+Run tests locally:
+
+```bash
+pip install -r requirements.txt
+pytest test_model.py
+```
+
+## 📄 License
+
+This project is licensed under the **MIT License**.  
+You are free to use, modify, and distribute this project for personal and commercial purposes.
+
+
 
 
