@@ -1,4 +1,11 @@
+# virtual environment
 venv/
+.env
+
+# python cache
 __pycache__/
 *.pyc
-.DS_Store
+
+# model files (agar heavy ho)
+*.pkl
+*.joblib
