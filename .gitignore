@@ -1,11 +1,18 @@
-# virtual environment
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
 venv/
 .env
 
-# python cache
-__pycache__/
-*.pyc
+# OS
+.DS_Store
 
-# model files (agar heavy ho)
-*.pkl
-*.joblib
+# Model artifacts (optional – keep if small)
+# *.pkl
+
+# IDE
+.vscode/
