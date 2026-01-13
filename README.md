@@ -13,6 +13,19 @@ A Loan Approval Prediction API built with FastAPI and a trained XGBoost machine 
 - Automated testing using pytest  
 - Threshold logic for probability-based decisions  
 
+## 🌐 Live Deployment
+
+The Loan Approval Prediction API is deployed on **Render** using Docker and is publicly accessible.
+
+- **Live API URL**:  
+  https://loan-approval-ml-fastapi.onrender.com
+
+- **Swagger Documentation**:  
+  https://loan-approval-ml-fastapi.onrender.com/docs
+
+> Note: The application is hosted on Render’s free tier. If the service is idle, the first request may take a few seconds due to cold start.
+
+
 
 ## 🛠 Environment Setup
 
@@ -32,28 +45,42 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
+## 🐳 Docker Support
 
+The application is fully containerized using Docker for consistent local development and cloud deployment.
+
+### Build Docker Image
+```bash
+docker build -t loan-approval-api .
+```
+### Run Docker Container
+```bash
+docker run -p 8000:8000 loan-approval-api
+```
+### Access the API locally at:
+```bash
+http://localhost:8000/docs
+```
 
 ## 📂 Repository Structure
 
 ```text
 loan-approval-ml-fastapi/
-├── app.py
-├── train_model.py
-├── final_train_model.py
-├── threshold.py
-├── loan_xgboost_model.pkl
-├── loan_threshold.pkl
-├── train.csv
-├── test.csv
-├── test_model.py
-├── requirements.txt
-├── __pycache__/
-└── .gitignore 
+├── app.py                      # FastAPI application
+├── train_model.py              # Initial model training script
+├── final_train_model.py        # Final training pipeline
+├── threshold.py                # Probability threshold logic
+├── loan_xgboost_model.pkl      # Trained ML model
+├── loan_threshold.pkl          # Saved decision threshold
+├── train.csv                   # Training dataset
+├── test.csv                    # Test dataset
+├── test_model.py               # Automated tests
+├── Dockerfile                  # Docker configuration
+├── requirements.txt            # Python dependencies
+├── README.md                   # Project documentation
+└── .gitignore
 ```
 
-
----
 
 ## 🧠 Model Training
 
@@ -126,11 +153,12 @@ Example response:
 
 ## 🚀 Future Improvements
 
-- Dockerize the application
-- Deploy API to cloud (Render / Railway / AWS)
-- Add CI/CD using GitHub Actions
-- Improve model performance with hyperparameter tuning
-- Add authentication and rate limiting
+- Add authentication and API rate limiting
+- Implement request logging and monitoring
+- Add CI/CD pipeline using GitHub Actions
+- Improve model performance with advanced hyperparameter tuning
+- Add API versioning for better backward compatibility
+
 
 
 ## 🌟 Project Highlights
